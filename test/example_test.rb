@@ -25,13 +25,13 @@ class ExampleTest < MiniTest::Unit::TestCase
   def test_class_calculates_angle_radians
     v1 = MyVector[1, 2]
     v2 = MyVector[3, 4]
-    assert_equal(0.011861444059125252, MyVector.angle(v1, v2))
+    assert_equal(0.6796106835184006, MyVector.angle(v1, v2))
   end
 
   def test_instance_calculates_angle_radians
     v1 = MyVector[1, 2]
     v2 = MyVector[3, 4]
-    assert_equal(0.011861444059125252, v1.angle(v2))
+    assert_equal(0.6796106835184006, v1.angle(v2))
   end
 
 end
