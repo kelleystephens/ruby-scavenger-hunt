@@ -1,4 +1,5 @@
 require 'test_helper'
+require_relative '../lib/vector'
 
 class ExampleTest < MiniTest::Unit::TestCase
 
@@ -9,10 +10,13 @@ class ExampleTest < MiniTest::Unit::TestCase
   end
 
   def test_add_integer_to_vector
-    v = Vector[1, 2]
-    assert_equal(Vector[2, 3], v.add(1))
+    v = MyVector[1, 2]
+    assert_equal(Vector[2, 3], v+1)
   end
 
-
+  def test_shovel_operator
+    v = MyVector[1, 2]
+    assert_equal(MyVector[1, 2, 3], v << 3)
+  end
 
 end

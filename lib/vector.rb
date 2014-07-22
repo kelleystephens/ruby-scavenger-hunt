@@ -1,6 +1,6 @@
 require "matrix"
 
-class VectorChild < Vector
+class MyVector < Vector
 
   def distance(v)
     Math.sqrt((self[0] - v[0])**2 + (self[1] - v[1])**2)
@@ -11,6 +11,12 @@ class VectorChild < Vector
     d2 = v2.distance(v3)
     pathlength = d1 + d2
     pathlength
+  end
+
+  def <<(n)
+    self[2] = 0
+    x = self  + MyVector[0, 0, n]
+    x
   end
 
 end
