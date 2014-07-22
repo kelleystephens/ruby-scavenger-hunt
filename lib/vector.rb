@@ -1,11 +1,21 @@
+require "matrix"
+
 class VectorChild < Vector
 
-  def initialize(x, y)
-    @a = Vector[x, y]
+  def distance(v)
+    Math.sqrt((self[0] - v[0])**2 + (self[1] - v[1])**2)
   end
 
-  def distance(x2, y2)
-    Math.sqrt((x2 - @a[0]).exp(2) + (y2 - @a[1]).exp(2))
+  def self.pathlength(v1, v2, v3)
+    d1 = v1.distance(v2)
+    d2 = v2.distance(v3)
+    pathlength = d1 + d2
+    pathlength
   end
 
 end
+
+# Don't need an initialize class bc vector already has 1 so would technically be overridding it
+# MyVector[1,2].distance(Vector[2,2]) is how you would call the distance method
+# def distance(v)  -- v is the second vector passed in
+# self is the instance that distance is called on
