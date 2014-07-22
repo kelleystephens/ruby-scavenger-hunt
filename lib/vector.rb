@@ -22,14 +22,12 @@ class MyVector < Vector
     cos = (v1.inner_product v2)/((Math.sqrt(v1[1]**2 + v2[1]**2)) * (Math.sqrt(v1[0]**2 + v2[0]**2)))
     theta = Math.acos(cos)
     radians = (theta * Math::PI)/180
-    radians
   end
 
   def angle(v)
     cos = (self.inner_product v)/((Math.sqrt(self[1]**2 + v[1]**2)) * (Math.sqrt(self[0]**2 + v[0]**2)))
     theta = Math.acos(cos)
     radians = (theta * Math::PI)/180
-    radians
   end
 
 end
