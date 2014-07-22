@@ -14,9 +14,7 @@ class MyVector < Vector
   end
 
   def <<(n)
-    self[2] = 0
-    x = self  + MyVector[0, 0, n]
-    x
+    self[2] = n
   end
 
 end
