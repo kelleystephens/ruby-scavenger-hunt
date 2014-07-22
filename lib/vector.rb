@@ -4,12 +4,8 @@ class VectorChild < Vector
     @a = Vector[x, y]
   end
 
-  def [](i)
-    @a[i]
-  end
-
   def distance(x2, y2)
-    Math.sqrt((x2 - [](0)).exp(2) + (y2 - [](1)).exp(2))
+    Math.sqrt((x2 - @a[0]).exp(2) + (y2 - @a[1]).exp(2))
   end
 
 end
