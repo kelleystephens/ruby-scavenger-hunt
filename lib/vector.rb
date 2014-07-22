@@ -19,8 +19,9 @@ class MyVector < Vector
   end
 
   def self.angle(v1, v2)
-    cos = (v1.inner_product v2)/((Math.sqrt(v1[1]**2 + v2[1]**2)) * (Math.sqrt(v1[0]**2 + v2[0]**2)))
-    radians = Math.acos(cos)
+    # cos = (v1.inner_product v2)/((Math.sqrt(v1[1]**2 + v2[1]**2)) * (Math.sqrt(v1[0]**2 + v2[0]**2)))
+    # radians = Math.acos(cos)
+    v1.angle(v2)
   end
 
   def angle(v)

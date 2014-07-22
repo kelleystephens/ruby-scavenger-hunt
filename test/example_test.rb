@@ -1,5 +1,6 @@
 require 'test_helper'
 require_relative '../lib/vector'
+require_relative '../lib/new_integer'
 
 class ExampleTest < MiniTest::Unit::TestCase
 
@@ -32,6 +33,10 @@ class ExampleTest < MiniTest::Unit::TestCase
     v1 = MyVector[1, 2]
     v2 = MyVector[3, 4]
     assert_equal(0.6796106835184006, v1.angle(v2))
+  end
+
+  def test_factors_in_Integer_class
+    assert_equal([2, 3, 4, 6], 12.factors)
   end
 
 end
