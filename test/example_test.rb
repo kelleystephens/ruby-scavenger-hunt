@@ -8,4 +8,11 @@ class ExampleTest < MiniTest::Unit::TestCase
     # wish to test.
   end
 
+  def test_add_integer_to_vector
+    v = Vector[1, 2]
+    assert_equal(Vector[2, 3], v.add(1))
+  end
+
+
+
 end
