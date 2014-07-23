@@ -36,7 +36,8 @@ class ExampleTest < MiniTest::Unit::TestCase
   end
 
   def test_factors_in_Integer_class
-    assert_equal([2, 3, 4, 6], 12.factors)
+    assert_equal [2, 3, 4, 6], 12.factors
+    assert_equal [2, 4, 5, 10], 20.factors
   end
 
 end
